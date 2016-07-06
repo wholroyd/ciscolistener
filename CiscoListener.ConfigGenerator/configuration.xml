@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventingConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Rules>
+    <EventingRule>
+      <Condition>//Header[Severity&lt;5]/Severity/text()</Condition>
+      <Template>Warning</Template>
+    </EventingRule>
+  </Rules>
+  <Templates>
+    <EventingTemplate Default="false" Severity="Warning" Name="Warning">
+      <Description>Opens low priority ticket</Description>
+      <Template>At approximately $//CallHome/EventTime$, the following device sent a message:
+
+Make/Model:      $//CallHome/Event/Brand$ $//CallHome/Event/Series$
+Device Name:     $//CallHome//SystemInfo/Name$
+Chassis Model:   $//CallHome//Chassis/Model$
+Chassis Version: $//CallHome//Chassis/HardwareVersion$
+Chassis Serial:  $//CallHome//Chassis/SerialNumber$
+
+The message sent was:
+
+$//CallHome/MessageDescription$</Template>
+      <EventId>1001</EventId>
+    </EventingTemplate>
+    <EventingTemplate Default="true" Severity="Error" Name="Error">
+      <Description>Opens medium priority ticket</Description>
+      <Template>At approximately $//CallHome/EventTime$, the following device sent a message:
+
+Make/Model:      $//CallHome/Event/Brand$ $//CallHome/Event/Series$
+Device Name:     $//CallHome//SystemInfo/Name$
+Chassis Model:   $//CallHome//Chassis/Model$
+Chassis Version: $//CallHome//Chassis/HardwareVersion$
+Chassis Serial:  $//CallHome//Chassis/SerialNumber$
+
+The message sent was:
+
+$//CallHome/MessageDescription$</Template>
+      <EventId>1002</EventId>
+    </EventingTemplate>
+  </Templates>
+</EventingConfiguration>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.25302.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiscoListener", "CiscoListener\CiscoListener.csproj", "{185E1FED-1B84-493F-8B26-A8883A0E3E52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiscoListener.ConfigGenerator", "CiscoListener.ConfigGenerator\CiscoListener.ConfigGenerator.csproj", "{931584E3-4F12-4309-B8C8-FFF13043E9CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{185E1FED-1B84-493F-8B26-A8883A0E3E52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185E1FED-1B84-493F-8B26-A8883A0E3E52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185E1FED-1B84-493F-8B26-A8883A0E3E52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185E1FED-1B84-493F-8B26-A8883A0E3E52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{931584E3-4F12-4309-B8C8-FFF13043E9CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{931584E3-4F12-4309-B8C8-FFF13043E9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{931584E3-4F12-4309-B8C8-FFF13043E9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{931584E3-4F12-4309-B8C8-FFF13043E9CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

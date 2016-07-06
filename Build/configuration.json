@@ -1,0 +1,27 @@
+{
+    "Rules": [
+        {
+            "Condition": "//Header[Severity<5]/Severity/text()",
+            "Template": "Warning",
+            "Overrides": null
+        }
+    ],
+    "Templates": [
+        {
+            "Default": false,
+            "Severity": "Warning",
+            "Name": "Warning",
+            "Description": "Opens low priority ticket",
+            "Template": "At approximately $//CallHome/EventTime$, the following device sent a message:\r\n\r\nMake/Model:      $//CallHome/Event/Brand$ $//CallHome/Event/Series$\r\nDevice Name:     $//CallHome//SystemInfo/Name$\r\nChassis Model:   $//CallHome//Chassis/Model$\r\nChassis Version: $//CallHome//Chassis/HardwareVersion$\r\nChassis Serial:  $//CallHome//Chassis/SerialNumber$\r\n\r\nThe message sent was:\r\n\r\n$//CallHome/MessageDescription$",
+            "EventId": 1001
+        },
+        {
+            "Default": true,
+            "Severity": "Error",
+            "Name": "Error",
+            "Description": "Opens medium priority ticket",
+            "Template": "At approximately $//CallHome/EventTime$, the following device sent a message:\r\n\r\nMake/Model:      $//CallHome/Event/Brand$ $//CallHome/Event/Series$\r\nDevice Name:     $//CallHome//SystemInfo/Name$\r\nChassis Model:   $//CallHome//Chassis/Model$\r\nChassis Version: $//CallHome//Chassis/HardwareVersion$\r\nChassis Serial:  $//CallHome//Chassis/SerialNumber$\r\n\r\nThe message sent was:\r\n\r\n$//CallHome/MessageDescription$",
+            "EventId": 1002
+        }
+    ]
+}
